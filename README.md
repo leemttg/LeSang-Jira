@@ -1,3 +1,4 @@
+Không liên lạc được bạn cùng nhóm nên Sang làm 1 mình.
 1. Login-signup page
 
 2. Main page:
