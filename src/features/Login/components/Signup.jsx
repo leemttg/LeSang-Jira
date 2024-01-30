@@ -130,7 +130,7 @@ const Signup = () => {
         </Form.Item>
       </Form>
 
-      <p className="text-center">
+      <p className="text-center text-2xl">
         Already have an account? <NavLink to="/auth/login">Login here.</NavLink>
       </p>
     </div>

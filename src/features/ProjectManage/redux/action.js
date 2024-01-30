@@ -18,26 +18,7 @@ export const updateUserProfileAction = (data) => async (next) => {
     throw error;
   }
 };
-// export const fetchUserByProject = (idProject) => async (next) => {
-//   try {
-//     const res = await requestor({
-//       method: "GET",
-//       url: apiPath.USER_BY_PROJECT,
-//       params: { idProject },
-//     });
-//     console.log(res);
-//     next({
-//       type: actions.SET_USER_BY_PROJECT,
-//       payload: res.data.content,
-//     });
-//   } catch (error) {
-//     console.log(error);
-//     if (error.response) alert(error.response.data.message);
-//     throw error;
-//   }
-// };
 
-//PROJECT
 export const fetchAllProject = () => async (next) => {
   try {
     const res = await requestor({
@@ -146,33 +127,6 @@ export const updateStatusTask = (data) => async () => {
     throw alert(error.response.data.content);
   }
 };
-//API hư
-// export const updateEstimateTime = (data) => async () => {
-//   try {
-//     const res = await requestor({
-//       method: "PUT",
-//       url: apiPath.UPDATE_ESTIMATE,
-//       data,
-//     });
-//     console.log(res);
-//   } catch (error) {
-//     console.log(error);
-//     throw alert(error.response.data.content);
-//   }
-// };
-// export const updateTimeTrackingSpent = (data) => async () => {
-//   try {
-//     const res = await requestor({
-//       method: "PUT",
-//       url: apiPath.UPDATE_TIME_TRACKING,
-//       data,
-//     });
-//     console.log(res);
-//   } catch (error) {
-//     console.log(error);
-//     throw alert(error.response.data.content);
-//   }
-// };
 
 export const fetchTaskDetail = (taskId) => async (next) => {
   try {
@@ -251,7 +205,6 @@ export const removeUserTask = (data) => async () => {
     throw error;
   }
 };
-//assign user to task
 export const assignUserTask = (data) => async () => {
   if (!window.confirm("Assign this user?")) return;
   try {
@@ -269,7 +222,6 @@ export const assignUserTask = (data) => async () => {
   }
 };
 
-//add comment
 export const addCommentAction = (data) => async () => {
   try {
     const res = await requestor({
@@ -285,7 +237,6 @@ export const addCommentAction = (data) => async () => {
     throw error;
   }
 };
-//Delete comment
 
 export const deleteCommentAction = (idComment) => async () => {
   if (!window.confirm("Delete this comment?")) return;

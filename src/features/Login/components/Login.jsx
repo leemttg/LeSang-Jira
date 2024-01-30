@@ -17,7 +17,7 @@ const Login = () => {
     console.log("Failed:", errorInfo);
   };
   return (
-    <div className="pt-10 px-5">
+    <div className="pt-20 px-10">
       <Form
         name="basic"
         labelCol={{
@@ -47,6 +47,7 @@ const Login = () => {
         </Form.Item>
 
         <Form.Item
+        className="text-blue-500"
           label="Password"
           name="passWord"
           rules={[
@@ -82,7 +83,7 @@ const Login = () => {
         </Form.Item>
       </Form>
 
-      <p className="text-center">
+      <p className="text-center text-2xl">
         Not a member? <NavLink to="/auth/signup">Register here.</NavLink>
       </p>
     </div>

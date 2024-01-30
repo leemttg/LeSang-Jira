@@ -2,6 +2,7 @@ import { Button, Layout, Menu } from "antd";
 import { Content, Header } from "antd/es/layout/layout";
 import Sider from "antd/es/layout/Sider";
 import React from "react";
+import logo from "./jira.png"
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import {
   DatabaseFilled,
@@ -12,18 +13,18 @@ import {
 const navItems = [
   {
     key: "1",
-    icon: <DatabaseFilled className="pl-7" />,
-    label: <Link to="/list">Project List</Link>,
+    icon: <DatabaseFilled className="pl-7 text-2xl text-yellow-500" />,
+    label: <Link to="/list" className="text-xl">Project List</Link>,
   },
   {
     key: "2",
-    icon: <FileAddFilled className="pl-7" />,
-    label: <Link to="/create">Create Project</Link>,
+    icon: <FileAddFilled className="pl-7 text-2xl text-yellow-500" />,
+    label: <Link to="/create" className="text-xl">Create Project</Link>,
   },
   {
     key: "3",
-    icon: <SettingFilled className="pl-7" />,
-    label: <Link to="/user">User Profile</Link>,
+    icon: <SettingFilled className="pl-7  text-2xl text-yellow-500" />,
+    label: <Link to="/user" className="text-xl">User Profile</Link>,
   },
 ];
 const ProjectManage = () => {
@@ -43,11 +44,11 @@ const ProjectManage = () => {
           <Header className="header">
             <div className="px-5 flex justify-between">
               <div className="text-gray-200 text-2xl font-semibold">
-                <a className="text-center">
+                <a className="text-center p-5">
                   <img
-                    src="https://wac-cdn.atlassian.com/dam/jcr:ab384028-e8a3-4dd1-8b45-6d564ef7936a/Jira%20Software_24.svg?cdnVersion=960"
-                    loading="auto"
-                    height="24px"
+                  className="pt-5"
+                    src={logo}
+                    height="50px"
                     alt="Jira Software"
                   />
                 </a>
@@ -57,7 +58,7 @@ const ProjectManage = () => {
                   {user.name}
                 </span>
                 <Button
-                  className="ml-2 px-2 bg-red-900 text-white border-transparent  hover:text-neutral-900 hover:bg-red-800 "
+                  className="ml-2 px-2 bg-red-600 text-white border-transparent  hover:text-neutral-900 hover:bg-red-800 "
                   onClick={handleLogout}
                 >
                   <LogoutOutlined />
